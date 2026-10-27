@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bb8dt0i0e5bnf"]
+
+[ext_resource type="Script" uid="uid://rn7wdm5urjsh" path="res://zumbi.gd" id="1_fbq4i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahknw"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ahknw"]
+radius = 150.0
+
+[node name="Zumbi" type="CharacterBody2D" unique_id=1658682954]
+motion_mode = 1
+script = ExtResource("1_fbq4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2124394258]
+shape = SubResource("RectangleShape2D_ahknw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=419557769]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(7.219613e-08, 0.623326, 0.1155479, 1)
+
+[node name="Visao" type="Area2D" parent="." unique_id=1096699453]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visao" unique_id=108527118]
+shape = SubResource("CircleShape2D_ahknw")
+
+[connection signal="body_entered" from="Visao" to="." method="_on_visao_body_entered"]
+[connection signal="body_exited" from="Visao" to="." method="_on_visao_body_exited"]

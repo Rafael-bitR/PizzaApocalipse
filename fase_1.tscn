@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bn8sam6xjjrlo"]
+
+[ext_resource type="PackedScene" uid="uid://ccxhvjuu3drcl" path="res://jogador.tscn" id="1_5s2kv"]
+[ext_resource type="PackedScene" uid="uid://c80acwui20jm5" path="res://parede.tscn" id="2_urf38"]
+[ext_resource type="PackedScene" uid="uid://bb8dt0i0e5bnf" path="res://zumbi.tscn" id="3_urf38"]
+
+[node name="Fase1" type="Node2D" unique_id=982612052]
+
+[node name="Jogador" parent="." unique_id=2053029960 instance=ExtResource("1_5s2kv")]
+position = Vector2(296, 315)
+velocidade = 250.0
+
+[node name="Zumbi" parent="." unique_id=1658682954 instance=ExtResource("3_urf38")]
+position = Vector2(800, 318)
+
+[node name="Parede" parent="." unique_id=1993502978 instance=ExtResource("2_urf38")]
+position = Vector2(32, 221)
+
+[node name="Parede2" parent="." unique_id=374773656 instance=ExtResource("2_urf38")]
+position = Vector2(1120, 221)
+
+[node name="Parede3" parent="." unique_id=827305619 instance=ExtResource("2_urf38")]
+position = Vector2(776.00006, 32)
+rotation = 1.5707964
+scale = Vector2(1, 1.7)
+
+[node name="Parede4" parent="." unique_id=1654127202 instance=ExtResource("2_urf38")]
+position = Vector2(726.0001, 616)
+rotation = 1.5707964
+scale = Vector2(1, 1.7)
